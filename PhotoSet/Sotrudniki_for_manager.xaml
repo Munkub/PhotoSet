@@ -1,0 +1,89 @@
+﻿<Window x:Class="PhotoSet.Sotrudniki_for_manager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PhotoSet"
+        mc:Ignorable="d"
+        Title="Sotrudniki_for_manager" Height="514" Width="883">
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="#DCDCDC "/>
+        </Grid.Background>
+        <TextBlock Margin="20,4,0,450" TextAlignment="Center" FontSize="24"><Run Language="ru-ru" Text="Сотрудники"/></TextBlock>
+        <TextBlock Margin="32,227,623,234" FontSize="20"><Run Language="ru-ru" Text="Фамилия"/></TextBlock>
+        <TextBox x:Name="SurnameTbx" Margin="32,254,623,205"/>
+        <DataGrid x:Name="PhotogrDG" Margin="24,48,8,273" />
+        <Button x:Name="InsertBt" Content="Добавить" Margin="33,392,604,75" FontSize="20" Click="InsertBt_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border CornerRadius="5" Background="#A79AFF">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="UpdateBtn" Content="Изменить" Margin="322,396,340,72" FontSize="20" Click="UpdateBtn_Click">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border CornerRadius="5" Background="#A79AFF">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="BackBtn" Content="Назад" Margin="337,438,347,29" FontSize="20" Click="BackBtn_Click">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border CornerRadius="5" Background="#A79AFF">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <TextBlock Margin="35,289,623,172" FontSize="20"><Run Language="ru-ru" Text="Имя"/></TextBlock>
+        <TextBox x:Name="NameTbx" Margin="35,316,624,143"/>
+        <TextBlock Margin="282,226,391,235" FontSize="20"><Run Language="ru-ru" Text="Отчество"/></TextBlock>
+        <TextBox x:Name="PatronymicTbx" Margin="282,253,391,206"/>
+        <TextBlock Margin="283,288,387,173" FontSize="20"><Run Language="ru-ru" Text="Контактные данные"/></TextBlock>
+        <TextBox x:Name="ContactTbx" Margin="283,315,388,144"/>
+        <Button x:Name="DeleteBtn" Content="Удалить" Margin="585,394,77,73" FontSize="20" Click="DeleteBtn_Click">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border CornerRadius="5" Background="#A79AFF">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <TextBlock Margin="516,227,156,234" FontSize="20"><Run Language="ru-ru" Text="Пароль"/></TextBlock>
+        <TextBox x:Name="PasswordTbx" Margin="516,254,156,205"/>
+        <TextBlock Margin="518,289,153,172" FontSize="20"><Run Language="ru-ru" Text="Логин"/></TextBlock>
+        <TextBox x:Name="LoginTbx" Margin="518,316,154,143"/>
+        <ComboBox x:Name="RoleCbx" Margin="747,253,50,215"/>
+    </Grid>
+</Window>
